@@ -1,0 +1,16 @@
+<section class="cta-section">
+  {{ if .Get "title" }}
+  <h2>{{ .Get "title" }}</h2>
+  {{ end }}
+  {{ if .Get "subtitle" }}
+  <p class="subtitle">{{ .Get "subtitle" }}</p>
+  {{ end }}
+  <div class="cta-buttons">
+    {{ if .Get "primary-text" }}
+    <a href="{{ .Get "primary-link" }}" class="cta-primary">{{ .Get "primary-text" }}</a>
+    {{ end }}
+    {{ if .Get "secondary-text" }}
+    <a href="{{ .Get "secondary-link" }}" class="cta-secondary">{{ .Get "secondary-text" }}</a>
+    {{ end }}
+  </div>
+</section>

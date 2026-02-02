@@ -1,0 +1,7 @@
+<div class="provider-card">
+  {{ if .Get "logo" }}
+  <div class="logo">{{ .Get "logo" }}</div>
+  {{ end }}
+  <h3>{{ .Get "name" }}</h3>
+  <p>{{ .Get "description" }}</p>
+</div>

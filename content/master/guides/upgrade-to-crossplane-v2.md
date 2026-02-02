@@ -8,7 +8,7 @@ Crossplane v2 introduces significant improvements while maintaining backward
 compatibility with most v1 configurations. This guide helps you upgrade from
 Crossplane v1.x to v2.
 
-Learn about [new features in Crossplane v2]({{<ref "../whats-new">}}) including
+Learn about [new features in Crossplane v2]({{<ref "../learn/whats-new">}}) including
 namespaced resources, the ability to compose any Kubernetes resource, and new
 operational workflows.
 
@@ -410,5 +410,5 @@ After upgrading:
 3. **Try Operations**: Experiment with operational workflows
 4. **Plan migration**: Consider which existing resources to migrate to v2 patterns
 
-Read more about [what's new in v2]({{<ref "../whats-new">}}) and explore the
+Read more about [what's new in v2]({{<ref "../learn/whats-new">}}) and explore the
 updated [composition documentation]({{<ref "../composition/compositions">}}).

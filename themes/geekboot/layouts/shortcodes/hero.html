@@ -1,0 +1,14 @@
+<div class="homepage-hero">
+  <h1>{{ .Get "title" }}</h1>
+  {{ if .Get "subtitle" }}
+  <p class="subtitle">{{ .Get "subtitle" }}</p>
+  {{ end }}
+  <div class="hero-ctas">
+    {{ if .Get "cta-primary" }}
+    <a href="{{ .Get "cta-primary-link" }}" class="cta-primary">{{ .Get "cta-primary" }}</a>
+    {{ end }}
+    {{ if .Get "cta-secondary" }}
+    <a href="{{ .Get "cta-secondary-link" }}" class="cta-secondary">{{ .Get "cta-secondary" }}</a>
+    {{ end }}
+  </div>
+</div>

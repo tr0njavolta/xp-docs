@@ -1,0 +1,420 @@
+// Marketing page styles (for detail pages like /architecture/, /providers/, etc.)
+
+.marketing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+
+  @include media-breakpoint-down(lg) {
+    padding: 2.5rem 1.5rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.75rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #{$aqua-400};
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.3rem;
+      margin-top: 2rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  ul, ol {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  a {
+    color: #{$aqua-400};
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+      color: #{$aqua-500};
+    }
+  }
+
+  code {
+    background: var(--code-background);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: "Consolas", monospace;
+  }
+
+  pre {
+    background: var(--code-background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border-color);
+  }
+}
+
+// Provider grid
+.provider-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.provider-card {
+  padding: 2rem;
+  border-radius: 8px;
+  background: var(--body-background);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-color: #{$aqua-400};
+  }
+
+  .logo {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--body-font-color);
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.85;
+    line-height: 1.5;
+  }
+}
+
+// Architecture section
+.architecture-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--body-background);
+  border-left: 4px solid #{$aqua-400};
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+
+  @include media-breakpoint-down(md) {
+    padding: 1.5rem;
+  }
+
+  h3 {
+    margin-top: 0;
+    color: #{$aqua-400};
+    font-size: 1.2rem;
+  }
+
+  .diagram-wrapper {
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    background: rgba(93, 217, 200, 0.05);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+  }
+
+  .mermaid {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+    svg {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// Community links
+.community-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.community-card {
+  padding: 2rem;
+  border-radius: 8px;
+  background: var(--body-background);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-color: #{$aqua-400};
+  }
+
+  h3 {
+    margin-top: 0;
+    color: #{$aqua-400};
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    background: #{$aqua-400};
+    color: #{$fog-1000};
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+
+    &:hover {
+      background: #{$aqua-500};
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(93, 217, 200, 0.3);
+    }
+  }
+}
+
+// Commercial/support section
+.support-tier {
+  padding: 2.5rem;
+  border-radius: 8px;
+  background: var(--body-background);
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+
+  &.featured {
+    border-color: #{$aqua-400};
+    border-width: 2px;
+    box-shadow: 0 8px 16px rgba(93, 217, 200, 0.2);
+    transform: scale(1.02);
+  }
+
+  h3 {
+    color: #{$aqua-400};
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: #{$aqua-500};
+  }
+
+  .description {
+    color: var(--body-font-color);
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+    flex-grow: 1;
+
+    li {
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+  }
+
+  .cta {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background: #{$aqua-400};
+    color: #{$fog-1000};
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    align-self: flex-start;
+
+    &:hover {
+      background: #{$aqua-500};
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(93, 217, 200, 0.3);
+    }
+  }
+}
+
+// Pattern/guide cards
+.pattern-card {
+  padding: 2rem;
+  border-radius: 8px;
+  background: var(--body-background);
+  border-left: 4px solid #{$grass-400};
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left-color: #{$grass-500};
+  }
+
+  h3 {
+    margin-top: 0;
+    color: #{$grass-400};
+    font-size: 1.15rem;
+  }
+
+  code {
+    background: var(--code-background);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: "Consolas", monospace;
+  }
+
+  .code-block {
+    background: var(--code-background);
+    padding: 1.5rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border-color);
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+
+  pre {
+    margin: 0;
+  }
+}
+
+// Backlinks section
+.backlinks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+
+  a {
+    color: #{$aqua-400};
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+      text-decoration: underline;
+      color: #{$aqua-500};
+      transform: translateX(2px);
+    }
+
+    &::before {
+      content: '← ';
+      margin-right: 0.25rem;
+    }
+
+    &:not(:first-child)::before {
+      content: '| ';
+      margin-right: 0.5rem;
+      color: var(--border-color);
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    gap: 1rem;
+    flex-direction: column;
+    text-align: center;
+
+    a::before {
+      content: '';
+      margin: 0;
+    }
+
+    a:not(:first-child)::before {
+      content: '';
+      margin: 0;
+    }
+  }
+}

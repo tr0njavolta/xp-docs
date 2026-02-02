@@ -1,0 +1,36 @@
+<div id="whats-new-banner" style="background: linear-gradient(135deg, var(--aqua-400) 0%, var(--grass-400) 100%); color: white; padding: 1rem 2rem; margin-bottom: 2rem; border-radius: 8px; display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+  <div>
+    <strong>✨ What's New in Crossplane v2</strong>
+    <p style="margin: 0.5rem 0 0 0; opacity: 0.9;">
+      Discover the latest features and improvements
+    </p>
+  </div>
+  <div style="display: flex; gap: 1rem; align-items: center; white-space: nowrap;">
+    <a href="{{ .Site.BaseURL }}learn/whats-new/" style="color: white; text-decoration: underline; font-weight: 600; padding: 0.5rem 1rem; background: rgba(255,255,255,0.2); border-radius: 4px; transition: background 0.3s;">
+      Learn More →
+    </a>
+    <button id="close-banner" style="background: transparent; border: none; color: white; font-size: 1.25rem; cursor: pointer; padding: 0; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center;" aria-label="Close banner">
+      ✕
+    </button>
+  </div>
+</div>
+
+<script>
+(function() {
+  const banner = document.getElementById('whats-new-banner');
+  const closeBtn = document.getElementById('close-banner');
+
+  // Check if banner was previously dismissed
+  if (localStorage.getItem('crossplane-whats-new-banner-dismissed')) {
+    banner.style.display = 'none';
+  }
+
+  // Handle close button
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      banner.style.display = 'none';
+      localStorage.setItem('crossplane-whats-new-banner-dismissed', 'true');
+    });
+  }
+})();
+</script>

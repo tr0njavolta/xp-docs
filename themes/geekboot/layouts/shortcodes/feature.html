@@ -1,0 +1,7 @@
+<div class="feature-card">
+  {{ if .Get "icon" }}
+  <div class="icon">{{ .Get "icon" }}</div>
+  {{ end }}
+  <h3>{{ .Get "title" }}</h3>
+  <p>{{ .Get "description" }}</p>
+</div>

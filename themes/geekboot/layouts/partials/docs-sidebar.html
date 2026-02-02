@@ -12,8 +12,8 @@
         <div class="section-container container pe-0 pt-1">
           <div class="container nav-container pe-0 d-flex w-100 {{if eq . $current}}active{{ else if $expand }}active-parent{{end}}">
             <a class="d-flex w-100 border-0" href="{{.Permalink}}">{{ .Title }} </a>
-            {{ if and .IsSection (ne .FirstSection .) }}
-              {{/* Don't put an expand icon on pages that aren't sections or the section index */}}
+            {{ if and .IsSection (ne .FirstSection .) (gt (len .Pages) 0) }}
+              {{/* Only show expand icon on sections that have child pages */}}
               <div class="d-flex flex-shrink-1 sidebar-control-container align-self-center">
                 <input type="checkbox" class="d-flex sidebar-checkbox" {{if $expand}}checked{{ end }} aria-label="Close or Expand {{.Title}} Section" />
                 <label for="collapse-{{$id}}" class="sidebar-label {{if not $expand}} collapsed {{ end }}" data-bs-toggle="collapse" data-bs-target="#collapse-{{$id}}" aria-expanded="false" aria-label="Close or Expand {{.Title}} Section">

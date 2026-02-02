@@ -1,0 +1,11 @@
+<div class="architecture-section">
+  {{ if .Get "title" }}
+  <h3>{{ .Get "title" }}</h3>
+  {{ end }}
+  {{ if .Get "description" }}
+  <p>{{ .Get "description" }}</p>
+  {{ end }}
+  <div class="diagram-wrapper">
+    {{ .Inner }}
+  </div>
+</div>
