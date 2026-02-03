@@ -38,7 +38,7 @@ Choose your learning path and start building with Crossplane.
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0;">
 
-<a href="https://killercoda.com/crossplane" style="padding: 2rem; border-radius: 12px; background: linear-gradient(135deg, rgba(0, 200, 200, 0.05) 0%, rgba(0, 200, 200, 0.08) 100%); border: 2px solid var(--border-color); text-decoration: none; color: var(--body-font-color); display: block; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--content-link-color)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none';">
+<a href="https://killercoda.com/tr0njavolta/scenario/xp-composition" style="padding: 2rem; border-radius: 12px; background: linear-gradient(135deg, rgba(0, 200, 200, 0.05) 0%, rgba(0, 200, 200, 0.08) 100%); border: 2px solid var(--border-color); text-decoration: none; color: var(--body-font-color); display: block; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--content-link-color)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none';">
   <div style="position: absolute; top: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, var(--aqua-400), var(--aqua-400)); opacity: 0.1; border-radius: 0 12px 0 100px;"></div>
   <div style="position: relative; z-index: 1;">
     <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎯</div>
