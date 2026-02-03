@@ -502,4 +502,4 @@ The [Patch and Transform]({{<ref "../guides/function-patch-and-transform">}}) do
 [function-patch-and-transform]: {{<ref "../guides/function-patch-and-transform">}}
 [function-go-templating]: https://github.com/crossplane-contrib/function-go-templating
 [Composition Functions]: {{<ref "./compositions">}}
-[Context]: {{<ref "./compositions/#function-pipeline-context">}}
+[Context]: {{<ref "./compositions#function-pipeline-context">}}

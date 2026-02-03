@@ -22,59 +22,41 @@ cascade:
 
 Crossplane connects your Kubernetes cluster to external, non-Kubernetes resources, and allows platform teams to build custom Kubernetes APIs to consume those resources.
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
 
-<div style="padding: 1.5rem; border-radius: 8px; background: var(--body-background); border: 1px solid var(--border-color);">
-  <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-    <span style="font-size: 1.5rem; margin-right: 0.75rem;">☁️</span>
-    <h3 style="margin: 0; font-size: 1.25rem;">Multi-Cloud Native</h3>
-  </div>
-  <p style="margin: 0; opacity: 0.8;">Connect to AWS, Azure, GCP, and 80+ providers from a single control plane</p>
-</div>
+**Multi-cloud native:** Connect to AWS, Azure, GCP, and 80+ providers from a single control plane</p>
 
-<div style="padding: 1.5rem; border-radius: 8px; background: var(--body-background); border: 1px solid var(--border-color);">
-  <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-    <span style="font-size: 1.5rem; margin-right: 0.75rem;">📦</span>
-    <h3 style="margin: 0; font-size: 1.25rem;">GitOps Ready</h3>
-  </div>
-  <p style="margin: 0; opacity: 0.8;">Manage infrastructure as code with kubectl and your favorite GitOps tools</p>
-</div>
+**Gitops ready:** Manage infrastructure as code with kubectl and your favorite GitOps tools</p>
 
-<div style="padding: 1.5rem; border-radius: 8px; background: var(--body-background); border: 1px solid var(--border-color);">
-  <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-    <span style="font-size: 1.5rem; margin-right: 0.75rem;">🎯</span>
-    <h3 style="margin: 0; font-size: 1.25rem;">Custom APIs</h3>
-  </div>
-  <p style="margin: 0; opacity: 0.8;">Build platform APIs tailored to your organization's needs</p>
-</div>
+**Custom APIs:** Build platform APIs tailored to your organization's needs</p>
 
-</div>
 
 Crossplane creates Kubernetes resources that represent external infrastructure. These resources can be anything from cloud provider services to on-premises hardware.
 
 ## Try Crossplane
 
+Choose your learning path and start building with Crossplane.
+
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0;">
 
-<a href="https://killercoda.com/crossplane" style="padding: 2rem; border-radius: 12px; background: linear-gradient(135deg, rgba(0, 200, 200, 0.05) 0%, rgba(100, 200, 100, 0.05) 100%); border: 2px solid var(--border-color); text-decoration: none; color: var(--body-font-color); display: block; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--content-link-color)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none';">
-  <div style="position: absolute; top: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, var(--aqua-400), var(--grass-400)); opacity: 0.1; border-radius: 0 12px 0 100px;"></div>
+<a href="https://killercoda.com/crossplane" style="padding: 2rem; border-radius: 12px; background: linear-gradient(135deg, rgba(0, 200, 200, 0.05) 0%, rgba(0, 200, 200, 0.08) 100%); border: 2px solid var(--border-color); text-decoration: none; color: var(--body-font-color); display: block; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--content-link-color)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none';">
+  <div style="position: absolute; top: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, var(--aqua-400), var(--aqua-400)); opacity: 0.1; border-radius: 0 12px 0 100px;"></div>
   <div style="position: relative; z-index: 1;">
-    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎮</div>
-    <h3 style="margin: 0 0 0.75rem 0; font-size: 1.25rem; font-weight: 600;">Interactive Playground</h3>
-    <p style="margin: 0 0 1.25rem 0; opacity: 0.8; font-size: 0.95rem;">No installation required. Learn Crossplane in your browser with guided, hands-on tutorials.</p>
+    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎯</div>
+    <h3 style="margin: 0 0 0.75rem 0; font-size: 1.25rem; font-weight: 600;">Composition Guide</h3>
+    <p style="margin: 0 0 1.25rem 0; opacity: 0.8; font-size: 0.95rem;">Build custom APIs by composing resources. Try it in your browser or follow the guide.</p>
     <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--content-link-color); font-weight: 600; font-size: 0.9rem;">
-      Launch Tutorial
+      Start Learning
       <span style="font-size: 1rem;">→</span>
     </div>
   </div>
 </a>
 
-<a href="{{<ref "get-started">}}" style="padding: 2rem; border-radius: 12px; background: linear-gradient(135deg, rgba(100, 200, 100, 0.05) 0%, rgba(200, 200, 100, 0.05) 100%); border: 2px solid var(--border-color); text-decoration: none; color: var(--body-font-color); display: block; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--content-link-color)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none';">
-  <div style="position: absolute; top: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, var(--grass-400), var(--sun-400)); opacity: 0.1; border-radius: 0 12px 0 100px;"></div>
+<a href="{{<ref "get-started/get-started-with-managed-resources">}}" style="padding: 2rem; border-radius: 12px; background: linear-gradient(135deg, rgba(100, 200, 100, 0.05) 0%, rgba(100, 200, 100, 0.08) 100%); border: 2px solid var(--border-color); text-decoration: none; color: var(--body-font-color); display: block; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--content-link-color)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none';">
+  <div style="position: absolute; top: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, var(--grass-400), var(--grass-400)); opacity: 0.1; border-radius: 0 12px 0 100px;"></div>
   <div style="position: relative; z-index: 1;">
-    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">💻</div>
-    <h3 style="margin: 0 0 0.75rem 0; font-size: 1.25rem; font-weight: 600;">Local Setup</h3>
-    <p style="margin: 0 0 1.25rem 0; opacity: 0.8; font-size: 0.95rem;">Install Crossplane locally and build your first control plane with step-by-step guides.</p>
+    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">☁️</div>
+    <h3 style="margin: 0 0 0.75rem 0; font-size: 1.25rem; font-weight: 600;">Managed Resources</h3>
+    <p style="margin: 0 0 1.25rem 0; opacity: 0.8; font-size: 0.95rem;">Manage cloud infrastructure with kubectl. Control AWS, Azure, GCP and more.</p>
     <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--content-link-color); font-weight: 600; font-size: 0.9rem;">
       Get Started
       <span style="font-size: 1rem;">→</span>
@@ -82,37 +64,31 @@ Crossplane creates Kubernetes resources that represent external infrastructure. 
   </div>
 </a>
 
-</div>
+<a href="{{<ref "get-started/get-started-with-operations">}}" style="padding: 2rem; border-radius: 12px; background: linear-gradient(135deg, rgba(200, 150, 50, 0.05) 0%, rgba(200, 150, 50, 0.08) 100%); border: 2px solid var(--border-color); text-decoration: none; color: var(--body-font-color); display: block; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--content-link-color)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none';">
+  <div style="position: absolute; top: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, var(--sun-400), var(--sun-400)); opacity: 0.1; border-radius: 0 12px 0 100px;"></div>
+  <div style="position: relative; z-index: 1;">
+    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">⚙️</div>
+    <h3 style="margin: 0 0 0.75rem 0; font-size: 1.25rem; font-weight: 600;">Automate Operations</h3>
+    <p style="margin: 0 0 1.25rem 0; opacity: 0.8; font-size: 0.95rem;">Run operational tasks and day-two workflows like monitoring, scaling, and maintenance.</p>
+    <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--content-link-color); font-weight: 600; font-size: 0.9rem;">
+      Learn More
+      <span style="font-size: 1rem;">→</span>
+    </div>
+  </div>
+</a>
 
-## Choose Your Learning Path
-
-Crossplane has core features. **Which one should you learn first?**
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-
-<div style="padding: 1.75rem; border-radius: 12px; background: linear-gradient(135deg, rgba(0, 200, 200, 0.03) 0%, rgba(0, 200, 200, 0.08) 100%); border: 2px solid rgba(0, 200, 200, 0.2); position: relative; overflow: hidden;">
-  <div style="position: absolute; top: -1px; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--aqua-400), transparent);"></div>
-  <h3 style="margin: 0 0 0.75rem 0; font-size: 1.1rem; color: var(--aqua-400);">🎯 Build Custom APIs</h3>
-  <p style="margin: 0 0 1rem 0; font-size: 0.95rem; opacity: 0.8;">Create platform abstractions by composing multiple resources into custom Kubernetes APIs.</p>
-  <strong>Start with:</strong> <a href="{{<ref "get-started/get-started-with-composition">}}" style="color: var(--content-link-color); font-weight: 600; text-decoration: none;">Composition Guide →</a>
-  <p style="margin: 0.75rem 0 0 0; font-size: 0.85rem; opacity: 0.7; border-top: 1px solid rgba(0, 200, 200, 0.1); padding-top: 0.75rem;">Best for: Platform teams, IDPs, standardization</p>
-</div>
-
-<div style="padding: 1.75rem; border-radius: 12px; background: linear-gradient(135deg, rgba(100, 200, 100, 0.03) 0%, rgba(100, 200, 100, 0.08) 100%); border: 2px solid rgba(100, 200, 100, 0.2); position: relative; overflow: hidden;">
-  <div style="position: absolute; top: -1px; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--grass-400), transparent);"></div>
-  <h3 style="margin: 0 0 0.75rem 0; font-size: 1.1rem; color: var(--grass-400);">☁️ Manage Cloud Infrastructure</h3>
-  <p style="margin: 0 0 1rem 0; font-size: 0.95rem; opacity: 0.8;">Control AWS, Azure, GCP resources with kubectl and GitOps-friendly infrastructure as code.</p>
-  <strong>Start with:</strong> <a href="{{<ref "get-started/get-started-with-managed-resources">}}" style="color: var(--content-link-color); font-weight: 600; text-decoration: none;">Managed Resources Guide →</a>
-  <p style="margin: 0.75rem 0 0 0; font-size: 0.85rem; opacity: 0.7; border-top: 1px solid rgba(100, 200, 100, 0.1); padding-top: 0.75rem;">Best for: DevOps, infrastructure as code, GitOps</p>
-</div>
-
-<div style="padding: 1.75rem; border-radius: 12px; background: linear-gradient(135deg, rgba(200, 150, 50, 0.03) 0%, rgba(200, 150, 50, 0.08) 100%); border: 2px solid rgba(200, 150, 50, 0.2); position: relative; overflow: hidden;">
-  <div style="position: absolute; top: -1px; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--sun-400), transparent);"></div>
-  <h3 style="margin: 0 0 0.75rem 0; font-size: 1.1rem; color: var(--sun-400);">⚙️ Automate Operations</h3>
-  <p style="margin: 0 0 1rem 0; font-size: 0.95rem; opacity: 0.8;">Run operational tasks and day-two workflows like monitoring, scaling, and maintenance.</p>
-  <strong>Start with:</strong> <a href="{{<ref "get-started/get-started-with-operations">}}" style="color: var(--content-link-color); font-weight: 600; text-decoration: none;">Operations Guide →</a>
-  <p style="margin: 0.75rem 0 0 0; font-size: 0.85rem; opacity: 0.7; border-top: 1px solid rgba(200, 150, 50, 0.1); padding-top: 0.75rem;">Best for: Monitoring, scaling, upgrades, compliance</p>
-</div>
+<a href="{{<ref "get-started">}}" style="padding: 2rem; border-radius: 12px; background: linear-gradient(135deg, rgba(150, 100, 200, 0.05) 0%, rgba(150, 100, 200, 0.08) 100%); border: 2px solid var(--border-color); text-decoration: none; color: var(--body-font-color); display: block; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--content-link-color)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none';">
+  <div style="position: absolute; top: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(150, 100, 200, 0.3), rgba(150, 100, 200, 0.3)); opacity: 0.1; border-radius: 0 12px 0 100px;"></div>
+  <div style="position: relative; z-index: 1;">
+    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">💻</div>
+    <h3 style="margin: 0 0 0.75rem 0; font-size: 1.25rem; font-weight: 600;">Local Setup</h3>
+    <p style="margin: 0 0 1.25rem 0; opacity: 0.8; font-size: 0.95rem;">Install Crossplane locally and build your first control plane with step-by-step guides.</p>
+    <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--content-link-color); font-weight: 600; font-size: 0.9rem;">
+      Install Now
+      <span style="font-size: 1rem;">→</span>
+    </div>
+  </div>
+</a>
 
 </div>
 

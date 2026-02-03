@@ -48,7 +48,7 @@ Read about Crossplane v2's [backward compatibility](#backward-compatibility).
 
 {{<hint "note">}}
 This page assumes you're familiar with Crossplane. New to Crossplane? Read
-[What's Crossplane]({{<ref "../../learn/whats-crossplane">}}) instead.
+[What's Crossplane]({{<ref "../foundations/whatscrossplane">}}) instead.
 {{</hint>}}
 
 
@@ -172,7 +172,7 @@ Read more about Crossplane v2's [backward compatibility](#backward-compatibility
 {{</hint>}}
 
 Crossplane v2 also introduces
-[managed resource definitions]({{<ref "../../managed-resources/managed-resource-definitions">}})
+[managed resource definitions]({{<ref "../managed-resources/managed-resource-definitions">}})
 for selective activation of provider resources, reducing cluster overhead by
 installing only the managed resources you actually need.
 
@@ -215,7 +215,7 @@ app models with Crossplane.
 {{<hint "tip">}}
 You must grant Crossplane access to compose resources that aren't Crossplane
 resources like MRs or XRs. Read
-[the composition documentation]({{<ref "../../composition/compositions#grant-access-to-composed-resources">}})
+[the composition documentation]({{<ref "../composition/compositions#grant-access-to-composed-resources">}})
 to learn how to grant Crossplane access.
 {{</hint>}}
 
@@ -282,7 +282,7 @@ remained in alpha for over two years and are now unmaintained.
 
 Composite resources no longer have native connection details support. You
 can recreate this feature by composing your own connection details `Secret`
-as described in the [connection details composition guide]({{<ref "../../guides/connection-details-composition">}}).
+as described in the [connection details composition guide]({{<ref "../guides/connection-details-composition">}}).
 
 Crossplane v2 drops the `--registry` flag that allowed users to specify a default
 registry value and now requires users to always specify a fully qualified URL when
@@ -308,5 +308,5 @@ Crossplane v2 supports legacy v1-style XRs and MRs. Most users can upgrade from
 v1.x to Crossplane v2 without breaking changes.
 
 Existing Compositions require minor updates to work with Crossplane v2
-style XRs and MRs. Follow the [Crossplane v2 upgrade guide]({{<ref "../../guides/upgrade-to-crossplane-v2">}})
+style XRs and MRs. Follow the [Crossplane v2 upgrade guide]({{<ref "../guides/upgrade-to-crossplane-v2">}})
 for step-by-step migration instructions.

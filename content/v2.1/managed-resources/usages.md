@@ -223,9 +223,9 @@ for the long exponential backoff durations of the Kubernetes garbage collector.
 
 A typical use case for Usages is to define a deletion ordering between the
 resources in a Composition. The Usages support
-[matching controller reference]({{<ref "./managed-resources#matching-by-controller-reference" >}})
+[matching controller reference]({{<ref "./#matching-by-controller-reference">}})
 in selectors to ensures that the matching resource is in the same composite
-resource in the same way as [cross-resource referencing]({{<ref "./managed-resources#referencing-other-resources" >}}).
+resource in the same way as [cross-resource referencing]({{<ref "./#referencing-other-resources">}}).
 
 {{<hint "tip" >}}
 

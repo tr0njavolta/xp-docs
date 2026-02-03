@@ -21,7 +21,7 @@ A [composite resource]({{<ref "./composite-resources">}}) or XR is a custom API.
 You use two Crossplane types to create a new custom API:
 
 * A Composite Resource Definition (XRD) - This page. Defines the XR's schema.
-* A [Composition]({{<ref "./compositions" >}}) - Configures how the XR creates
+* A [Composition]({{<ref "./compositions">}}) - Configures how the XR creates
   other resources.
 {{</expand >}}
 
@@ -414,7 +414,7 @@ field indicates which version of the schema Compositions use. Only one
 version can be `referenceable`.
 
 {{< hint "note" >}}
-Changing which version is `referenceable:true` requires [updating the `compositeTypeRef.apiVersion`]({{<ref "./compositions#match-composite-resources" >}})
+Changing which version is `referenceable:true` requires [updating the `compositeTypeRef.apiVersion`]({{<ref "./compositions#match-composite-resources">}})
 of any Compositions referencing that XRD.
 {{< /hint >}}
 

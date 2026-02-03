@@ -174,7 +174,7 @@ This example uses a `ClusterProviderConfig` that applies to managed resources
 across all namespaces.
 
 You can also use a namespaced `ProviderConfig` that only applies to managed
-resources in a specific namespace. See the [`providerConfigRef`]({{<ref "../managed-resources/managed-resources#providerconfigref">}}) 
+resources in a specific namespace. See the [`providerConfigRef`]({{<ref "../managed-resources#providerconfigref">}}) 
 section in the managed resources docs for more details.
 {{</hint>}}
 

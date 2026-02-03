@@ -1,6 +1,6 @@
 ---
 title: What's Crossplane?
-weight: 3
+weight: 8
 description: Learn what Crossplane is and why you'd use it.
 ---
 
@@ -136,7 +136,7 @@ Functions allow you to write your configuration in multiple languages, including
 You can use composition together with [managed resources](#managed-resources) to
 build new custom resource APIs powered by managed resources.
 
-Follow [Get Started with Composition]({{<ref "../../get-started/get-started-with-composition">}})
+Follow [Get Started with Composition]({{<ref "../get-started/get-started-with-composition">}})
 to see how composition works.
 
 ### Managed resources
@@ -212,7 +212,7 @@ watch-apps@{animate: true}
 watch-rds@{animate: true}
 ```
 
-Follow [Get Started with Managed Resources]({{<ref "../../get-started/get-started-with-managed-resources">}})
+Follow [Get Started with Managed Resources]({{<ref "../get-started/get-started-with-managed-resources">}})
 to see how managed resources work.
 
 
@@ -271,7 +271,7 @@ Operations support three modes:
 You can use operations alongside composition and managed resources to build
 complete operational workflows for your control plane.
 
-Follow [Get Started with Operations]({{<ref "../../get-started/get-started-with-operations">}})
+Follow [Get Started with Operations]({{<ref "../get-started/get-started-with-operations">}})
 to see how operations work.
 
 {{<hint "note">}}
@@ -288,5 +288,5 @@ using the package manager. This allows you to deploy multiple control planes wit
 identical capabilities - for example one control plane per region or per
 service.
 
-Read about Crossplane [packages]({{<ref "../../packages">}})
+Read about Crossplane [packages]({{<ref "../packages">}})
 to learn about the package manager.

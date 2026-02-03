@@ -20,15 +20,15 @@ You use two Crossplane types to create a new custom API:
 
 * A [Composite Resource Definition]({{<ref "./composite-resource-definitions">}})
   (XRD) - Defines the XR's schema.
-* A [Composition]({{<ref "./compositions" >}}) - Configures how the XR creates
+* A [Composition]({{<ref "./compositions">}}) - Configures how the XR creates
   other resources.
 {{</expand >}}
 
 ## Create composite resources
 
-Creating composite resources requires a 
-[Composition]({{<ref "./compositions">}}) and a 
-[CompositeResourceDefinition]({{<ref "./composite-resource-definitions">}}) 
+Creating composite resources requires a
+[Composition]({{<ref "./compositions">}}) and a
+[CompositeResourceDefinition]({{<ref "./composite-resource-definitions">}})
 (XRD).  
 
 The Composition defines the set of resources to create. The XRD defines the
@@ -116,7 +116,7 @@ Select a specific Composition for a composite resource to use with
 The selected Composition must allow the composite resource to use it with a
 `compositeTypeRef`. Read more about the `compositeTypeRef` field in the
 [Enable Composite Resources]({{<ref "./compositions#match-composite-resources">}})
-section of the Composition documentation. 
+section of the Composition documentation.
 {{< /hint >}}
 
 ```yaml {label="compref",copy-lines="none"}
