@@ -4,28 +4,25 @@ weight: 30
 description: "Understanding Custom Resource Definitions and how to extend Kubernetes"
 ---
 
-## Why Extend Kubernetes?
+**Previous:** [Kubernetes Basics]({{<ref "kubernetes-basics">}}) - Essential
+concepts including reconciliation loops and controllers
 
-Kubernetes provides built-in resources like Pods, Services, and Deployments. But what if you need new resource types?
+---
 
-**Examples of needs:**
-- Deploy applications with custom configuration specific to your organization
-- Integrate with external systems (clouds, databases, monitoring)
-- Implement custom business logic
-- Create platform abstractions for your users
+Kubernetes **resources** are endpoints in the Kubernetes API and contains the
+collections for specific resource `kinds`.
 
-Without custom resources, you'd need to:
-1. Write custom software outside Kubernetes
-2. Manually manage resources
-3. Handle monitoring and error recovery yourself
+Resources like Pods, Services, and Deployments are built-in to the Kubernetes
+API. **Custom resources** extend the Kubernetes API beyond these built in
+objects. **Custom resource definitions** are Kubernetes API resources that allow
+you to define custom resources in your Kubernetes clusters.
 
-With custom resources and controllers, Kubernetes handles all of this.
+For example, if you manage a Kubernetes cluster and need to integrate it with an
+external system, you can create a CRD to define the schema of that system and
+allow Kubernetes to manage it for you.
 
-## Custom Resource Definition (CRD)
 
-A **Custom Resource Definition** defines the schema for a custom resource type.
-
-### Basic CRD Example
+## Basic CRD Example
 
 ```yaml
 apiVersion: apiextensions.k8s.io/v1
@@ -60,18 +57,19 @@ spec:
                 description: "Database size (small, medium, large)"
 ```
 
-### CRD Components
+### CRD components
 
-- **group**: Namespace for API versions (e.g., `example.com`, `aws.upbound.io`)
+- **group**: API Group for organizing related APIs (e.g., `example.com`, `aws.upbound.io`)
 - **kind**: Singular name of the resource (e.g., `Database`)
 - **plural**: Plural name (e.g., `databases`)
-- **scope**: `Namespaced` (per-namespace) or `Cluster` (cluster-wide)
+- **scope**: Namespaced (per-namespace) or `Cluster` (cluster-wide)
 - **versions**: Supported API versions of this CRD
 - **schema**: Validation rules for the resource
 
 ## Custom Resources
 
-Once a CRD exists, you can create instances (custom resources):
+Once a CRD exists, you can create custom resources that reference the CRD you
+created:
 
 ```yaml
 apiVersion: example.com/v1
@@ -85,29 +83,14 @@ spec:
   size: large
 ```
 
-Use standard kubectl commands:
 
-```bash
-# List all databases
-kubectl get databases
-
-# Get details
-kubectl describe database production-db
-
-# Watch for changes
-kubectl watch database production-db
-
-# Delete
-kubectl delete database production-db
-```
-
-## Understanding .spec and .status
+### Understanding .spec and .status
 
 Every custom resource has:
 
-### .spec - Desired State
+### .spec
 
-What you want to exist:
+The **spec** field contains the desired state - what you want to exist:
 
 ```yaml
 apiVersion: example.com/v1
@@ -120,9 +103,10 @@ spec:
   size: large           # What you want
 ```
 
-### .status - Actual State
+### .status
 
-The controller updates this to show what's really happening:
+The **status** field shows the observed state - the controller updates this to
+show what's really happening:
 
 ```yaml
 apiVersion: example.com/v1
@@ -228,45 +212,6 @@ $ kubectl apply -f invalid-database.yaml
 error: resource "databases.example.com/production-db" is invalid: ...
 ```
 
-## CRD Scope: Namespaced vs Cluster
-
-### Namespaced (Default)
-
-Resources exist in a specific namespace:
-
-```yaml
-scope: Namespaced
-```
-
-```yaml
-apiVersion: example.com/v1
-kind: Database
-metadata:
-  name: my-db
-  namespace: team-a  # In team-a namespace
----
-apiVersion: example.com/v1
-kind: Database
-metadata:
-  name: my-db
-  namespace: team-b  # Same name but different namespace
-```
-
-### Cluster Scope
-
-Resources are global to the cluster:
-
-```yaml
-scope: Cluster
-```
-
-```yaml
-apiVersion: example.com/v1
-kind: Database
-metadata:
-  name: shared-db  # Must be unique across entire cluster
-```
-
 ## How Crossplane Uses CRDs
 
 Crossplane uses custom resources to:
@@ -281,14 +226,16 @@ The fundamental pattern is the same:
 3. A controller watches and makes it happen
 4. Status shows what's actually happening
 
-## Key Takeaways
-
-- **CRDs extend Kubernetes** with custom resource types
-- **Custom resources** are instances of a CRD
-- **Controllers** implement the reconciliation logic
-- **.spec** declares desired state
-- **.status** shows actual state
-- **Validation** ensures resources follow the schema
-- **Scope** determines if resources are namespaced or cluster-wide
-
 Understanding CRDs is essential for building and using Crossplane effectively.
+
+---
+
+## Next steps
+
+Congratulations! You've completed the Foundations section and now understand the core concepts behind Crossplane.
+
+**Ready to build with Crossplane?** Check out the [Get Started]({{<ref "../get-started">}}) guides to:
+
+-   Build your first control plane with [Composition]({{<ref "../get-started/get-started-with-composition">}})
+-   Manage cloud infrastructure with [Managed Resources]({{<ref "../get-started/get-started-with-managed-resources">}})
+-   Create operational workflows with [Operations]({{<ref "../get-started/get-started-with-operations">}})

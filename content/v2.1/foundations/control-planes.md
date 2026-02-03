@@ -4,25 +4,21 @@ weight: 10
 description: "Understanding what control planes are and how they work"
 ---
 
-## What is a Control Plane?
+A **control plane** is software that controls other software. It's a core
+pattern in cloud native systems and is used by all major cloud providers.
 
-A **control plane** is software that controls other software. It's a core pattern in cloud native systems and is used by all major cloud providers.
+## How Control Planes Work
 
-### How Control Planes Work
-
-Control planes work by following a simple pattern:
+Control planes operate in a standardized workflow:
 
 1. **Declare Your Desired State**: You tell the control plane what you want through an API
 2. **Continuous Monitoring**: The control plane continuously monitors the actual state
 3. **Automatic Correction**: If the actual state drifts from desired state, the control plane automatically corrects it
 
-This pattern is called **declarative** configuration or **infrastructure as code**.
+Control planes enable **declarative** configuration. You declare your desired
+state for your resources and the control plane manages the actual state.
 
-### Real-World Example
-
-Consider deploying an application:
-
-**Without a Control Plane** (Imperative):
+For example, you can manually run commands to deploy an application in Docker:
 ```bash
 # You manually run these commands
 docker run -d -p 8080:8080 myapp:v1
@@ -33,7 +29,8 @@ docker kill <container-id>
 docker run -d -p 8080:8080 myapp:v2
 ```
 
-**With a Control Plane** (Declarative):
+With a declarative control plane, you write the end state of your application:
+
 ```yaml
 # You declare what you want
 apiVersion: v1
@@ -53,26 +50,9 @@ The control plane handles:
 - Automatically restarting it if it crashes
 - Rolling out new versions when you change the image
 
-### Key Characteristics
+## Next steps
 
-**Declarative**: You specify the desired end state, not the steps to achieve it.
+Now that you understand control planes, learn about the Kubernetes concepts that power Crossplane:
 
-**Automated**: The control plane automatically ensures the actual state matches your desired state.
+**Next:** [Kubernetes Basics]({{<ref "kubernetes-basics">}}) - Essential Kubernetes concepts including YAML, reconciliation loops, and controllers
 
-**Self-Healing**: If something fails, the control plane automatically fixes it.
-
-**Observable**: You can query the control plane to see the current state.
-
-## Control Planes Manage Anything
-
-Control planes aren't limited to containers. They can manage:
-- Infrastructure (VMs, networks, databases)
-- Applications (deployments, configuration)
-- Cloud resources (S3 buckets, RDS instances, load balancers)
-- Hybrid combinations of the above
-
-## Kubernetes is a Control Plane
-
-Kubernetes itself is a control plane. When you write a Kubernetes Deployment manifest, you're declaring desired state. Kubernetes ensures pods are running, restarts them if they fail, and rolls out updates.
-
-Crossplane extends Kubernetes to be a control plane for infrastructure and other external systems.

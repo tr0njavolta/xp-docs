@@ -4,11 +4,17 @@ weight: 20
 description: "Essential Kubernetes concepts: YAML, custom resources, and reconciliation loops"
 ---
 
-## Kubernetes YAML Syntax
+**Previous:** [Control Planes]({{<ref "control-planes">}}) - Understanding declarative configuration and control plane patterns
 
-Kubernetes uses YAML manifests to declare desired state. Understanding YAML is essential for working with Crossplane.
+---
 
-### Basic YAML Structure
+Understanding how to interact with Kubernetes is essential to understanding
+Crossplane.  
+
+Kubernetes uses YAML manifests to declare desired state. Parsing and writing
+YAML manifests will help you in your Crossplane journey.
+
+## Basic YAML Structure
 
 ```yaml
 ---
@@ -29,7 +35,7 @@ Key YAML components:
 - **metadata**: Information about the resource (name, namespace, labels, etc.)
 - **spec**: Desired specification for the resource
 
-### Namespaces
+## Namespaces
 
 Kubernetes uses **namespaces** to partition resources within a cluster.
 
@@ -51,67 +57,12 @@ Default namespace is `default`. To see resources in a namespace:
 kubectl get pods -n my-app
 ```
 
-## Kubernetes Custom Resources
+## Reconciliation loops
 
-Kubernetes allows you to extend it with **custom resources** - custom resource definitions (CRDs) that define new types beyond the built-in Pod, Deployment, Service, etc.
+Kubernetes uses **reconciliation loops** to ensure the actual state matches the
+desired state. This continuous state observation is a key benefit of [control planes]({{<ref "control-planes">}}).
 
-### Custom Resource Definition (CRD)
-
-A CRD is a template that defines the structure of a custom resource:
-
-```yaml
-apiVersion: apiextensions.k8s.io/v1
-kind: CustomResourceDefinition
-metadata:
-  name: myapps.example.com
-spec:
-  names:
-    kind: MyApp
-    plural: myapps
-  scope: Namespaced
-  versions:
-  - name: v1
-    served: true
-    storage: true
-    schema:
-      openAPIV3Schema:
-        type: object
-        properties:
-          spec:
-            type: object
-            properties:
-              replicas:
-                type: integer
-              image:
-                type: string
-```
-
-### Using Custom Resources
-
-Once a CRD is defined, you can create instances of it:
-
-```yaml
-apiVersion: example.com/v1
-kind: MyApp
-metadata:
-  name: my-app
-spec:
-  replicas: 3
-  image: myapp:1.0.0
-```
-
-Get custom resources:
-
-```bash
-kubectl get myapps
-kubectl describe myapp my-app
-```
-
-## Reconciliation Loops
-
-Kubernetes uses **reconciliation loops** to ensure the actual state matches the desired state. This is the heart of control planes.
-
-### How Reconciliation Works
+### How reconciliation works
 
 ```
 ┌─────────────────────────────────────┐
@@ -129,8 +80,8 @@ Kubernetes uses **reconciliation loops** to ensure the actual state matches the 
   5. REPEAT: Continuously watch for drift
 ```
 
-### Example: Deployment Reconciliation
-
+For example, to deploy an `nginx` web app, you create a YAML manifest to declare all
+your desired resources:
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -151,30 +102,31 @@ spec:
         image: nginx:1.14.2
 ```
 
-The Kubernetes controller continuously:
-1. **Observes**: Checks how many web-app pods are currently running
-2. **Compares**: Sees that 2 are running, but 3 are desired
-3. **Decides**: Need to start 1 more pod
-4. **Acts**: Creates a new pod
-5. **Repeats**: Continuously checks if the state matches
+The Kubernetes controller performs continuous observation on the external
+resource, compares the actual state to the desired state, adjusts the resources
+based on what it observes.
 
-If a pod crashes, the reconciliation loop will automatically restart it.
+In this example, if you declare you need 3 replicas and Kubernetes only observes
+2 after a pod crash, the Controller creates a new pod and repeats the
+observe/compare/correct cycle.
 
 ## Controllers
 
-A **controller** is the software that implements reconciliation for a resource type. Controllers watch resources and take action when changes occur.
+A **controller** is the software that implements reconciliation for a resource
+type. Controllers watch resources and take action when changes occur.
 
-For example:
-- **Deployment Controller**: Watches Deployments and ensures the right number of pods are running
-- **StatefulSet Controller**: Manages stateful applications with persistent identity
-- **Service Controller**: Manages how traffic is routed to pods
+Controllers implement the reconciliation for a resource type. Controllers observe
+the resources and updates them when a change occurs.
+
+Kubernetes built-in controllers include Deployment Controllers, Node
+Controllers, and ReplicaSet controllers to observe and manage those resources.
 
 ## Resource Status
 
 Resources have two important sections:
 
-- **spec**: The desired state (what you want)
-- **status**: The actual state (what's currently happening)
+- **spec**: The desired state - what you declare in your Custom Resource
+- **status**: The observed state - real resources as observed
 
 ```yaml
 apiVersion: v1
@@ -201,13 +153,10 @@ You can observe status:
 kubectl get pod my-pod -o yaml | grep -A 10 status:
 ```
 
-## Key Takeaways
+---
 
-- **Declarative**: You declare desired state in YAML, not steps
-- **Namespaces**: Isolate resources within a cluster
-- **Custom Resources**: Extend Kubernetes with your own resource types
-- **Reconciliation**: Controllers continuously ensure actual state matches desired state
-- **Self-Healing**: If something fails, the reconciliation loop fixes it automatically
-- **Status**: Always shows the current state of resources
+## Next steps
 
-These concepts are fundamental to understanding how Crossplane works.
+Now that you understand Kubernetes basics, learn how to extend Kubernetes with custom resources:
+
+**Next:** [Custom Resources & CRDs]({{<ref "custom-resources">}}) - Learn how to extend Kubernetes with Custom Resource Definitions and create your own resource types
