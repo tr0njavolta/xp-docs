@@ -141,4 +141,4 @@ kubectl get pod my-pod -o yaml | grep -A 10 status:
 
 Now that you understand Kubernetes basics, learn how to extend Kubernetes with custom resources:
 
-**Next:** [Custom Resources & CRDs]({{<ref "custom-resources">}}) - Learn how to extend Kubernetes with Custom Resource Definitions and create your own resource types
+* [Custom Resources & CRDs]({{<ref "custom-resources">}}) - Learn how to extend Kubernetes with Custom Resource Definitions and create your own resource types

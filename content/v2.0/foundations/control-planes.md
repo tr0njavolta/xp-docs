@@ -54,5 +54,5 @@ The control plane handles:
 
 Now that you understand control planes, learn about the Kubernetes concepts that power Crossplane:
 
-**Next:** [Kubernetes Basics]({{<ref "kubernetes-basics">}}) - Essential Kubernetes concepts including YAML, reconciliation loops, and controllers
+* [Kubernetes Basics]({{<ref "kubernetes-basics">}}) - Essential Kubernetes concepts including YAML, reconciliation loops, and controllers
 
