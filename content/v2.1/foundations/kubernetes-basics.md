@@ -60,28 +60,12 @@ kubectl get pods -n my-app
 ## Reconciliation loops
 
 Kubernetes uses **reconciliation loops** to ensure the actual state matches the
-desired state. This continuous state observation is a key benefit of [control planes]({{<ref "control-planes">}}).
+desired state. This continuous state observation is a key benefit of [control
+planes]({{<ref "control-planes">}}).
 
-### How reconciliation works
+For example, to deploy an `nginx` web app, you create a YAML manifest to declare
+all your desired resources:
 
-```
-┌─────────────────────────────────────┐
-│ Reconciliation Loop                 │
-└─────────────────────────────────────┘
-        ↓
-  1. OBSERVE: Read current state
-        ↓
-  2. COMPARE: Desired vs Actual
-        ↓
-  3. DECIDE: What needs to change
-        ↓
-  4. ACT: Make changes to reach desired state
-        ↓
-  5. REPEAT: Continuously watch for drift
-```
-
-For example, to deploy an `nginx` web app, you create a YAML manifest to declare all
-your desired resources:
 ```yaml
 apiVersion: apps/v1
 kind: Deployment

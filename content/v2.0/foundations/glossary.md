@@ -45,12 +45,3 @@ documentation.
 
 ---
 
-## Next steps
-
-Congratulations! You've completed the Foundations section and now understand the core concepts behind Crossplane.
-
-**Ready to build with Crossplane?** Check out the [Get Started]({{<ref "../get-started">}}) guides to:
-
--   Build your first control plane with [Composition]({{<ref "../get-started/get-started-with-composition">}})
--   Manage cloud infrastructure with [Managed Resources]({{<ref "../get-started/get-started-with-managed-resources">}})
--   Create operational workflows with [Operations]({{<ref "../get-started/get-started-with-operations">}})
