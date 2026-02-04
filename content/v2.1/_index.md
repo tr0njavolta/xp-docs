@@ -115,22 +115,4 @@ You need Crossplane because building custom infrastructure APIs is the future of
 - ✅ **Full GitOps support** - Infrastructure as code workflows
 
 
-## Join the Community
 
-<div style="border-radius: 0.75rem; padding: 2rem; text-align: center; margin-top: 3rem; background: var(--body-background); border: 1px solid var(--border-color);">
-
-Get help, share your experience, and contribute to making Crossplane better.
-
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1.5rem;">
-  <a href="https://slack.crossplane.io" style="padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; background: transparent; color: var(--content-link-color); border: 2px solid var(--content-link-color); transition: all 0.3s ease;" onmouseover="this.style.background='var(--content-link-color)'; this.style.color='white';" onmouseout="this.style.background='transparent'; this.style.color='var(--content-link-color)';">
-    💬 Join Slack
-  </a>
-  <a href="https://github.com/crossplane/crossplane" style="padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; background: var(--content-link-color); color: white; border: 2px solid var(--content-link-color); transition: all 0.3s ease;" onmouseover="this.style.opacity='0.9';" onmouseout="this.style.opacity='1';">
-    ⭐ GitHub
-  </a>
-  <a href="https://blog.crossplane.io" style="padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; background: transparent; color: var(--content-link-color); border: 2px solid var(--content-link-color); transition: all 0.3s ease;" onmouseover="this.style.background='var(--content-link-color)'; this.style.color='white';" onmouseout="this.style.background='transparent'; this.style.color='var(--content-link-color)';">
-    📝 Blog
-  </a>
-</div>
-
-</div>
