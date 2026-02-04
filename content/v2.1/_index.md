@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Crossplane"
+title: "Welcome"
 weight: -1
 description: "Build control planes without needing to write code"
 cascade:
@@ -8,29 +8,25 @@ cascade:
 
 {{< whats-new-banner >}}
 
-<div style="display: flex; align-items: center; gap: 30px; max-width: 900px; margin: 2rem 0;">
-  <div style="display: flex; align-items: center; gap: 15px;">
-    <div style="font-size: 3rem;">🚀</div>
-    <div style="text-align: left;">
-      <h1 style="margin: 0;">Crossplane</h1>
-      <p style="margin: 0; opacity: 0.8;">The cloud native control plane framework</p>
-    </div>
-  </div>
-</div>
-
 ## What is Crossplane?
 
-Crossplane connects your Kubernetes cluster to external, non-Kubernetes resources, and allows platform teams to build custom Kubernetes APIs to consume those resources.
+Crossplane connects your Kubernetes cluster to external, non-Kubernetes
+resources, and allows platform teams to build custom Kubernetes APIs to consume
+those resources.
 
 
-**Multi-cloud native:** Connect to AWS, Azure, GCP, and 80+ providers from a single control plane</p>
+**Multi-cloud native:** Connect to AWS, Azure, GCP, and 80+ providers from a
+single control plane</p>
 
-**Gitops ready:** Manage infrastructure as code with kubectl and your favorite GitOps tools</p>
+**Gitops ready:** Manage infrastructure as code with kubectl and your favorite
+GitOps tools</p>
 
 **Custom APIs:** Build platform APIs tailored to your organization's needs</p>
 
 
-Crossplane creates Kubernetes resources that represent external infrastructure. These resources can be anything from cloud provider services to on-premises hardware.
+Crossplane creates Kubernetes resources that represent external infrastructure.
+These resources can be anything from cloud provider services to on-premises
+hardware.
 
 ## Try Crossplane
 
@@ -96,11 +92,16 @@ Choose your learning path and start building with Crossplane.
 
 ## Why Crossplane?
 
-Infrastructure is complicated. As a Platform Engineer or DevOps Architect, your responsibility is to create a stable platform to serve your organization. Your developers need cloud resources and you need to manage them.
+Infrastructure is complicated. As a Platform Engineer or DevOps Architect, your
+responsibility is to create a stable platform to serve your organization. Your
+developers need cloud resources and you need to manage them.
 
-You're interested in Crossplane because infrastructure-as-code alone isn't enough. You're building a control plane for your organization—a sophisticated, self-service-minded architecture framework.
+You're interested in Crossplane because infrastructure-as-code alone isn't
+enough. You're building a control plane for your organization—a sophisticated,
+self-service-minded architecture framework.
 
-You need Crossplane because building custom infrastructure APIs is the future of resource management. To make Crossplane work for you, you need to:
+You need Crossplane because building custom infrastructure APIs is the future of
+resource management. To make Crossplane work for you, you need to:
 
 - Understand cloud resources
 - Make architectural decisions about what parameters to expose to your users
@@ -113,6 +114,4 @@ You need Crossplane because building custom infrastructure APIs is the future of
 - ✅ **Policy enforcement** - Centralized governance and compliance
 - ✅ **Continuous reconciliation** - Ensure actual state matches desired state
 - ✅ **Full GitOps support** - Infrastructure as code workflows
-
-
 

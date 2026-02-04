@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Crossplane"
+title: "Welcome"
 weight: -1
 description: "Build control planes without needing to write code"
 cascade:
@@ -8,49 +8,25 @@ cascade:
 
 {{< whats-new-banner >}}
 
-<div style="display: flex; align-items: center; gap: 30px; max-width: 900px; margin: 2rem 0;">
-  <div style="display: flex; align-items: center; gap: 15px;">
-    <div style="font-size: 3rem;">🚀</div>
-    <div style="text-align: left;">
-      <h1 style="margin: 0;">Crossplane</h1>
-      <p style="margin: 0; opacity: 0.8;">The cloud native control plane framework</p>
-    </div>
-  </div>
-</div>
-
 ## What is Crossplane?
 
-Crossplane connects your Kubernetes cluster to external, non-Kubernetes resources, and allows platform teams to build custom Kubernetes APIs to consume those resources.
+Crossplane connects your Kubernetes cluster to external, non-Kubernetes
+resources, and allows platform teams to build custom Kubernetes APIs to consume
+those resources.
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
 
-<div style="padding: 1.5rem; border-radius: 8px; background: var(--body-background); border: 1px solid var(--border-color);">
-  <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-    <span style="font-size: 1.5rem; margin-right: 0.75rem;">☁️</span>
-    <h3 style="margin: 0; font-size: 1.25rem;">Multi-Cloud Native</h3>
-  </div>
-  <p style="margin: 0; opacity: 0.8;">Connect to AWS, Azure, GCP, and 80+ providers from a single control plane</p>
-</div>
+**Multi-cloud native:** Connect to AWS, Azure, GCP, and 80+ providers from a
+single control plane</p>
 
-<div style="padding: 1.5rem; border-radius: 8px; background: var(--body-background); border: 1px solid var(--border-color);">
-  <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-    <span style="font-size: 1.5rem; margin-right: 0.75rem;">📦</span>
-    <h3 style="margin: 0; font-size: 1.25rem;">GitOps Ready</h3>
-  </div>
-  <p style="margin: 0; opacity: 0.8;">Manage infrastructure as code with kubectl and your favorite GitOps tools</p>
-</div>
+**Gitops ready:** Manage infrastructure as code with kubectl and your favorite
+GitOps tools</p>
 
-<div style="padding: 1.5rem; border-radius: 8px; background: var(--body-background); border: 1px solid var(--border-color);">
-  <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-    <span style="font-size: 1.5rem; margin-right: 0.75rem;">🎯</span>
-    <h3 style="margin: 0; font-size: 1.25rem;">Custom APIs</h3>
-  </div>
-  <p style="margin: 0; opacity: 0.8;">Build platform APIs tailored to your organization's needs</p>
-</div>
+**Custom APIs:** Build platform APIs tailored to your organization's needs</p>
 
-</div>
 
-Crossplane creates Kubernetes resources that represent external infrastructure. These resources can be anything from cloud provider services to on-premises hardware.
+Crossplane creates Kubernetes resources that represent external infrastructure.
+These resources can be anything from cloud provider services to on-premises
+hardware.
 
 ## Try Crossplane
 
@@ -58,7 +34,7 @@ Choose your learning path and start building with Crossplane.
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0;">
 
-<a href="https://killercoda.com/crossplane" style="padding: 2rem; border-radius: 12px; background: linear-gradient(135deg, rgba(0, 200, 200, 0.05) 0%, rgba(0, 200, 200, 0.08) 100%); border: 2px solid var(--border-color); text-decoration: none; color: var(--body-font-color); display: block; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--content-link-color)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none';">
+<a href="https://killercoda.com/tr0njavolta/scenario/xp-composition" style="padding: 2rem; border-radius: 12px; background: linear-gradient(135deg, rgba(0, 200, 200, 0.05) 0%, rgba(0, 200, 200, 0.08) 100%); border: 2px solid var(--border-color); text-decoration: none; color: var(--body-font-color); display: block; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--content-link-color)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none';">
   <div style="position: absolute; top: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, var(--aqua-400), var(--aqua-400)); opacity: 0.1; border-radius: 0 12px 0 100px;"></div>
   <div style="position: relative; z-index: 1;">
     <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎯</div>
@@ -116,11 +92,16 @@ Choose your learning path and start building with Crossplane.
 
 ## Why Crossplane?
 
-Infrastructure is complicated. As a Platform Engineer or DevOps Architect, your responsibility is to create a stable platform to serve your organization. Your developers need cloud resources and you need to manage them.
+Infrastructure is complicated. As a Platform Engineer or DevOps Architect, your
+responsibility is to create a stable platform to serve your organization. Your
+developers need cloud resources and you need to manage them.
 
-You're interested in Crossplane because infrastructure-as-code alone isn't enough. You're building a control plane for your organization—a sophisticated, self-service-minded architecture framework.
+You're interested in Crossplane because infrastructure-as-code alone isn't
+enough. You're building a control plane for your organization—a sophisticated,
+self-service-minded architecture framework.
 
-You need Crossplane because building custom infrastructure APIs is the future of resource management. To make Crossplane work for you, you need to:
+You need Crossplane because building custom infrastructure APIs is the future of
+resource management. To make Crossplane work for you, you need to:
 
 - Understand cloud resources
 - Make architectural decisions about what parameters to expose to your users
@@ -133,5 +114,4 @@ You need Crossplane because building custom infrastructure APIs is the future of
 - ✅ **Policy enforcement** - Centralized governance and compliance
 - ✅ **Continuous reconciliation** - Ensure actual state matches desired state
 - ✅ **Full GitOps support** - Infrastructure as code workflows
-
 
