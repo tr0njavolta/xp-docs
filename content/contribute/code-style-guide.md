@@ -211,3 +211,56 @@ aws_secret_access_key = $@<aws_secret_key>$@
 ```
 {{</* /editCode */>}}
 ````
+
+## Manifest shortcode
+
+The `manifest` shortcode embeds a YAML manifest inline and generates a `kubectl apply -f` command pointing to the published URL.
+
+Store manifests under `content/<version>/manifests/<page-path>/<file>.yaml`
+based on the referencing page location.
+
+For example, a page at `content/<version>/guides/change-logs.md` references
+`content/<version>/manifests/guides/change-logs/<file>.yaml` with
+`path="guides/change-logs/<file>.yaml"`.
+
+```markdown
+{{</* manifest path="code-style-guide/provider.yaml" */>}}
+```
+This renders as:
+
+{{< manifest path="code-style-guide/provider.yaml" >}}
+
+### Remove `apply` command
+
+Use `apply="false"` to render the YAML without the `kubectl apply -f` block.
+
+```markdown
+{{</* manifest path="code-style-guide/provider.yaml" apply="false" */>}}
+```
+
+{{< manifest path="code-style-guide/provider.yaml" apply="false" >}}
+
+### `generateName`
+
+Use `command="kubectl create -f"` for manifests that use `generateName`. `kubectl apply` doesn't support `generateName`.
+
+```markdown
+{{</* manifest path="code-style-guide/bucket.yaml" command="kubectl create -f" */>}}
+```
+
+{{< manifest path="code-style-guide/bucket.yaml" command="kubectl create -f" >}}
+
+### Line highlighting
+
+Use `label=` to enable dynamic line highlighting with the `hover` shortcode.
+
+```markdown
+Apply the {{</* hover label="provider" line="2" */>}}Provider{{</* /hover */>}} resource.
+
+{{</* manifest path="code-style-guide/provider.yaml" label="provider" */>}}
+```
+
+Apply the {{< hover label="provider" line="2" >}}Provider{{< /hover >}} resource.
+
+{{< manifest path="code-style-guide/provider.yaml" label="provider" >}}
+
